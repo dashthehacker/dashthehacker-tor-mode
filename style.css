@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: #959494;
+    position: relative;
+}
+
+#top-left-logo {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#top-left-logo img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    object-fit: cover;
+}
+
+#hackerztext {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-family: 'cool-text';
+    font-size: 50px;
+}
+
+@font-face {
+    font-family: 'cool-text';
+    src: url("/SuperRugged-4nBy9.ttf");
+}
+
+
+
+.container {
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 80%;
+}
+
+#downloads, #links, #documents, #templates {
+    flex: 1;
+    min-width: 200px;
+    height: 200px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
