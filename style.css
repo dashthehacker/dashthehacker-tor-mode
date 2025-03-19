@@ -8,6 +8,7 @@ body {
     height: 100vh;
     background-color: #959494;
     position: relative;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 #top-left-logo {
@@ -43,20 +44,22 @@ body {
     src: url("/SuperRugged-4nBy9.ttf");
 }
 
-
-
 .container {
     margin-top: 150px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    width: 80%;
+    width: 90%; /* Adjust container width */
+    max-width: 1200px; /* Limit maximum width */
+    padding: 0 20px; /* Add padding for small screens */
+    box-sizing: border-box;
 }
 
-#downloads, #links, #documents, #templates {
+#downloads, #documents, #templates {
     flex: 1;
-    min-width: 200px;
+    min-width: 250px; /* Increase min-width to better fit content */
+    max-width: 400px; /* Limit maximum width */
     height: 200px;
     background-color: #ddd;
     display: flex;
@@ -66,4 +69,41 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 10px;
+    overflow: hidden; /* Prevent overflow */
+    word-wrap: break-word; /* Ensure text wraps within the box */
+}
+
+#links {
+    flex: 1;
+    min-width: 250px;
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
+    overflow: visible; /* Allow overflowing content */
+    height: auto; /* Make the height adjust based on content */
+    padding: 10px;
+}
+
+#links ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+
+#links ul li {
+    margin: 5px 0;
+}
+
+#links ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    word-wrap: break-word; /* Ensure long URLs wrap correctly */
 }
